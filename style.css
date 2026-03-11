@@ -1,0 +1,263 @@
+:root {
+  --primary: #0d6efd;
+  --dark: #0f172a;
+  --muted: #64748b;
+  --light-bg: #f8fafc;
+  --border: #e2e8f0;
+  --card-bg: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: #ffffff;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+  padding: 90px 0 70px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.hero-card,
+.info-card,
+.pricing-card,
+.catalog-card,
+.contact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  height: 100%;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+}
+
+.machine-box {
+  background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+  border-radius: 24px;
+  padding: 28px;
+  color: #fff;
+  max-width: 380px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 500px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+.prototype-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* .machine-screen {
+  background: #0f172a;
+  border: 3px solid #475569;
+  border-radius: 16px;
+  height: 90px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93c5fd;
+  font-weight: 700;
+} */
+
+.machine-image {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background: #fff;
+  object-fit: cover;
+}
+
+.machine-paper {
+  width: 78%;
+  min-height: 90px;
+  background: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  color: #0f172a;
+  padding: 12px;
+  font-size: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.price-highlight {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.catalog-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.feature-list li,
+.simple-list li {
+  margin-bottom: 10px;
+  color: var(--dark);
+}
+
+.pricing-table .row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pricing-table .row-item:last-child {
+  border-bottom: none;
+}
+
+.cta-section {
+  background: var(--light-bg);
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.btn-rounded {
+  border-radius: 999px;
+  padding: 12px 20px;
+  font-weight: 600;
+}
+
+.small-note {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.section-reveal,
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.section-reveal.show,
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 22px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.25);
+  z-index: 999;
+}
+
+.back-to-top.show {
+  display: inline-flex;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 72px 0 56px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .machine-box {
+    min-height: auto;
+  }
+
+  .machine-paper {
+    width: 100%;
+  }
+
+  .pricing-table .row-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

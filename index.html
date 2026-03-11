@@ -6,182 +6,10 @@
   <title>VendingPrint - Solusi Printer Otomatis untuk Bisnis</title>
   <meta name="description" content="Website resmi VendingPrint, solusi vending machine printer untuk bisnis. Cocok untuk kemitraan B2B dengan harga unit mulai Rp8 jutaan." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <style>
-    :root {
-      --primary: #0d6efd;
-      --dark: #0f172a;
-      --muted: #64748b;
-      --light-bg: #f8fafc;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--dark);
-      background: #ffffff;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-      padding: 90px 0 70px;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: #dbeafe;
-      color: #1d4ed8;
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 600;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 700px;
-    }
-
-    .hero-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
-    }
-
-    .machine-box {
-      background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
-      border-radius: 24px;
-      padding: 28px;
-      color: #fff;
-      max-width: 360px;
-      margin: 0 auto;
-      position: relative;
-      min-height: 430px;
-    }
-
-    .machine-screen {
-      background: #0f172a;
-      border: 3px solid #475569;
-      border-radius: 16px;
-      height: 110px;
-      margin-bottom: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #93c5fd;
-      font-weight: 700;
-    }
-
-    .machine-printer {
-      background: #e2e8f0;
-      height: 70px;
-      border-radius: 14px;
-      margin-bottom: 18px;
-      position: relative;
-    }
-
-    .machine-paper {
-      width: 74%;
-      height: 85px;
-      background: #fff;
-      border-radius: 10px;
-      margin: 0 auto;
-      color: #0f172a;
-      padding: 12px;
-      font-size: 12px;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-    }
-
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .section-subtitle {
-      color: var(--muted);
-      max-width: 720px;
-      margin: 0 auto 40px;
-    }
-
-    .info-card, .pricing-card, .catalog-card, .contact-card {
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 20px;
-      padding: 24px;
-      height: 100%;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-    }
-
-    .price-highlight {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary);
-    }
-
-    .catalog-price {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--dark);
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .feature-list li, .simple-list li {
-      margin-bottom: 10px;
-      color: #334155;
-    }
-
-    .pricing-table .row-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .pricing-table .row-item:last-child {
-      border-bottom: none;
-    }
-
-    .cta-section {
-      background: var(--light-bg);
-    }
-
-    footer {
-      border-top: 1px solid #e2e8f0;
-      color: var(--muted);
-    }
-
-    .btn-rounded {
-      border-radius: 999px;
-      padding: 12px 20px;
-      font-weight: 600;
-    }
-
-    .small-note {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
     <div class="container">
       <a class="navbar-brand" href="#home">VendingPrint</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -193,6 +21,7 @@
           <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
           <li class="nav-item"><a class="nav-link" href="#harga">Harga</a></li>
           <li class="nav-item"><a class="nav-link" href="#katalog">Katalog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
           <li class="nav-item"><a class="btn btn-primary btn-rounded ms-lg-2" href="#hubungi">Hubungi Kami</a></li>
         </ul>
       </div>
@@ -202,95 +31,95 @@
   <section class="hero" id="home">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="hero-badge">Website Resmi VendingPrint</span>
-          <h1>Solusi Vending Machine Printer untuk Bisnis Modern</h1>
+        <div class="col-lg-6 fade-up">
+          <span class="hero-badge">Official Website VendingPrint</span>
+          <h1>Printer Self-Service 24 Jam untuk Bisnis Modern</h1>
           <p class="mt-3">
-            VendingPrint adalah mesin printer otomatis dalam box yang dirancang untuk kebutuhan bisnis dan kemitraan.
-            Cocok ditempatkan di kampus, kantor, coworking space, minimarket, area publik, dan lokasi strategis lainnya.
+            VendingPrint adalah mesin printer self-service dalam box yang dirancang untuk kebutuhan bisnis dan kemitraan.
+            Unit ini dapat beroperasi 24 jam tanpa operator, sehingga cocok ditempatkan di kampus, kantor, coworking space,
+            minimarket, area publik, dan lokasi strategis lainnya.
           </p>
           <p>
-            Fokus utama kami adalah model <strong>B2B</strong>, yaitu membantu mitra memiliki dan menjalankan VendingPrinter mereka sendiri.
-            Selanjutnya, mitra dapat melayani pelanggan akhir <strong>B2C</strong> dengan tarif cetak yang fleksibel dan dapat disesuaikan.
+            Fokus utama kami adalah model <strong>B2B</strong>, yaitu membantu mitra memiliki dan menjalankan unit VendingPrint mereka sendiri.
+            Namun, bisnis ini juga berpotensi <strong>B2C</strong> karena nantinya unit akan digunakan langsung oleh customer akhir.
           </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
             <a href="#katalog" class="btn btn-primary btn-rounded">Lihat Katalog Pembelian</a>
             <a href="#harga" class="btn btn-outline-primary btn-rounded">Lihat Harga</a>
           </div>
-          <div class="row g-3 mt-4">
+          <div class="row g-3 mt-4 stats-row">
             <div class="col-sm-4">
-              <div class="hero-card text-center">
+              <div class="hero-card text-center hover-lift">
                 <div class="small-note">Harga Unit</div>
-                <div class="fw-bold fs-4">Rp8 Jutaan</div>
+                <div class="fw-bold fs-4">Rp8.000.000</div>
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="hero-card text-center">
-                <div class="small-note">Cetak B/W</div>
+              <div class="hero-card text-center hover-lift">
+                <div class="small-note">Rekomendasi B/W</div>
                 <div class="fw-bold fs-4">Rp500</div>
               </div>
             </div>
             <div class="col-sm-4">
-              <div class="hero-card text-center">
-                <div class="small-note">Cetak Warna</div>
+              <div class="hero-card text-center hover-lift">
+                <div class="small-note">Rekomendasi Warna</div>
                 <div class="fw-bold fs-4">Rp1.000</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 fade-up">
           <div class="machine-box">
-            <div class="machine-screen">VendingPrint</div>
-            <div class="machine-printer"></div>
-            <div class="machine-paper">
-              <strong>Contoh Output</strong><br />
-              Dokumen / Tugas / Tiket / Formulir<br />
-              Hitam Putih: Rp500<br />
-              Warna: Rp1.000
-            </div>
             <div class="mt-4">
-              <h5 class="fw-bold">Mesin Printer dalam Box</h5>
-              <p class="mb-0 text-white-50">
-                Unit vending machine print yang praktis, rapi, dan siap ditempatkan di berbagai lokasi bisnis.
-              </p>
-            </div>
+              <h5 class="fw-bold">Tampilan Mesin VendingPrint</h5>
+            </div>            
+            <!-- <div class="prototype-badge">Prototype 1:1</div> -->
+            <!-- <div class="machine-screen">VendingPrint</div> -->
+            <img src="VendingPrint.png" alt="Prototype mesin VendingPrint" class="machine-image" />
+            <p>Note: Gambar masih prototype</p>
+            <!-- <div class="machine-paper">
+              <strong>Contoh Layanan</strong><br />
+              Dokumen / Tugas / Tiket / Formulir<br />
+              Rekomendasi B/W: Rp500<br />
+              Rekomendasi Warna: Rp1.000
+            </div> -->
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5" id="tentang">
+  <section class="py-5 section-reveal" id="tentang">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Tentang VendingPrint</h2>
         <p class="section-subtitle">
           VendingPrint adalah brand bisnis printer otomatis yang menawarkan solusi cetak mandiri berbasis mesin dalam box.
-          Model ini dirancang untuk memudahkan pengusaha, pemilik lokasi, dan mitra usaha dalam membuka layanan print dengan sistem yang sederhana.
+          Model ini dirancang untuk memudahkan pengusaha, pemilik lokasi, dan mitra usaha dalam membuka layanan print self-service yang rapi dan praktis.
         </p>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="info-card">
+          <div class="info-card hover-lift">
             <h5 class="fw-bold">Fokus B2B</h5>
             <p class="muted mb-0">
-              Kami menjual unit VendingPrinter kepada mitra bisnis yang ingin mengembangkan layanan print otomatis di lokasi mereka.
+              Kami menjual unit VendingPrint kepada mitra bisnis yang ingin mengembangkan layanan print otomatis di lokasi mereka.
             </p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="info-card">
+          <div class="info-card hover-lift">
             <h5 class="fw-bold">Potensi B2C</h5>
             <p class="muted mb-0">
-              Setelah unit ditempatkan, mitra dapat melayani pelanggan akhir secara langsung dengan tarif cetak per lembar.
+              Setelah unit ditempatkan, customer dapat langsung menggunakan layanan print secara mandiri.
             </p>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="info-card">
+          <div class="info-card hover-lift">
             <h5 class="fw-bold">Harga Fleksibel</h5>
             <p class="muted mb-0">
-              Tarif cetak default dapat diatur ulang oleh pemilik VendingPrinter sesuai kebutuhan pasar dan strategi bisnis masing-masing.
+              Tarif Rp500 hitam putih dan Rp1.000 berwarna adalah rekomendasi harga dari kami. Harga akhir dapat ditentukan oleh mitra bisnis.
             </p>
           </div>
         </div>
@@ -298,46 +127,48 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light" id="produk">
+  <section class="py-5 bg-light section-reveal" id="produk">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Produk Kami</h2>
         <p class="section-subtitle">
-          Produk utama VendingPrint adalah satu unit mesin printer otomatis dalam box, siap untuk mendukung kebutuhan layanan print mandiri.
+          Produk utama VendingPrint adalah satu unit mesin printer self-service dalam box, siap untuk mendukung kebutuhan layanan print mandiri.
         </p>
       </div>
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-7">
-          <div class="catalog-card h-100">
-            <h3 class="fw-bold">VendingPrint Box Machine</h3>
+          <div class="catalog-card h-100 hover-lift">
+            <h3 class="fw-bold">VendingPrint</h3>
             <p class="muted">
               Mesin printer otomatis berbentuk box yang dirancang untuk kemudahan operasional dan penempatan di titik strategis.
             </p>
             <ul class="feature-list">
               <li>Unit printer dalam box / vending machine</li>
+              <li>Dapat beroperasi 24 jam tanpa operator</li>
               <li>Cocok untuk model usaha berbasis kemitraan</li>
               <li>Dapat ditempatkan di area publik, kampus, kantor, dan toko</li>
               <li>Mendukung layanan print hitam putih dan berwarna</li>
               <li>Tarif cetak dapat disesuaikan oleh pemilik unit</li>
             </ul>
-            <div class="mt-4">
+            <!-- <div class="mt-4">
               <span class="small-note d-block">Estimasi Harga Unit</span>
               <span class="price-highlight">Mulai Rp8.000.000</span>
               <p class="small-note mt-2 mb-0">
                 Harga dapat menyesuaikan spesifikasi, konfigurasi, dan kebutuhan bisnis.
               </p>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-lg-5">
-          <div class="pricing-card h-100">
+          <div class="pricing-card h-100 hover-lift">
             <h5 class="fw-bold">Skema Bisnis</h5>
             <p class="muted">VendingPrint dirancang untuk alur bisnis berikut:</p>
             <ol class="simple-list ps-3 mb-0">
-              <li>Mitra membeli unit VendingPrinter.</li>
+              <li>Mitra membeli unit VendingPrint.</li>
               <li>Mitra menempatkan unit di lokasi strategis.</li>
               <li>Pelanggan akhir menggunakan layanan print.</li>
               <li>Mitra mengatur tarif dan operasional sesuai kebutuhan.</li>
+              <li>Mitra mendapatkan keuntungan dari pelanggan yang menggunakan mesin tersebut.</li>
             </ol>
           </div>
         </div>
@@ -345,7 +176,7 @@
     </div>
   </section>
 
-  <section class="py-5" id="harga">
+  <section class="py-5 section-reveal" id="harga">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Informasi Harga</h2>
@@ -355,17 +186,17 @@
       </div>
       <div class="row g-4">
         <div class="col-lg-6">
-          <div class="pricing-card">
+          <div class="pricing-card hover-lift">
             <h4 class="fw-bold mb-3">Harga Unit Mesin</h4>
-            <div class="price-highlight mb-2">Sekitar Rp8 Jutaan / Box</div>
+            <div class="price-highlight mb-2">Mulai dari Rp8 Jutaan / Box</div>
             <p class="muted mb-0">
-              Estimasi harga satu unit VendingPrinter box untuk kebutuhan pengembangan bisnis dan kemitraan.
+              Estimasi harga satu unit VendingPrint box untuk kebutuhan pengembangan bisnis dan kemitraan. Harga dapat menyesuaikan spesifikasi, konfigurasi, dan kebutuhan bisnis.
             </p>
           </div>
         </div>
         <div class="col-lg-6">
-          <div class="pricing-card">
-            <h4 class="fw-bold mb-3">Tarif Cetak Default</h4>
+          <div class="pricing-card hover-lift">
+            <h4 class="fw-bold mb-3">Rekomendasi Tarif Cetak</h4>
             <div class="pricing-table">
               <div class="row-item">
                 <span>Print Hitam Putih</span>
@@ -377,7 +208,7 @@
               </div>
             </div>
             <p class="small-note mt-3 mb-0">
-              Tarif di atas merupakan harga acuan. Pemilik VendingPrint dapat melakukan kustomisasi harga sesuai strategi bisnis mereka.
+              Tarif di atas merupakan rekomendasi harga. Pemilik VendingPrint dapat melakukan kustomisasi harga sesuai strategi bisnis mereka.
             </p>
           </div>
         </div>
@@ -385,20 +216,20 @@
     </div>
   </section>
 
-  <section class="py-5 bg-light" id="katalog">
+  <section class="py-5 bg-light section-reveal" id="katalog">
     <div class="container">
       <div class="text-center mb-5">
         <h2 class="section-title">Katalog Pembelian</h2>
-        <p class="section-subtitle">
+        <!-- <p class="section-subtitle">
           Halaman ini dapat digunakan sebagai katalog internal di dalam website resmi untuk kebutuhan verifikasi dan pembelian unit.
-        </p>
+        </p> -->
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <div class="catalog-card">
+          <div class="catalog-card hover-lift">
             <div class="row g-4 align-items-center">
               <div class="col-md-7">
-                <h3 class="fw-bold mb-2">VendingPrint Box Machine</h3>
+                <h3 class="fw-bold mb-2">VendingPrint</h3>
                 <p class="muted mb-3">
                   Solusi printer otomatis dalam box untuk kemitraan dan pengembangan bisnis layanan cetak mandiri.
                 </p>
@@ -410,12 +241,10 @@
               </div>
               <div class="col-md-5">
                 <div class="p-4 rounded-4 border bg-light">
+                  <img src="VendingPrint.png" alt="Mesin VendingPrint" class="img-fluid rounded-4 border mb-3" />
                   <div class="small-note">Harga Katalog</div>
                   <div class="catalog-price mb-3">Rp8.000.000</div>
-                  <button class="btn btn-primary w-100 btn-rounded" onclick="scrollToContact()">Ajukan Pembelian</button>
-                  <p class="small-note mt-3 mb-0 text-center">
-                    Tombol ini dapat diarahkan ke WhatsApp, form, atau checkout internal sesuai kebutuhan.
-                  </p>
+                  <button class="btn btn-primary w-100 btn-rounded" onclick="scrollToContact()">Beli</button>
                 </div>
               </div>
             </div>
@@ -425,7 +254,54 @@
     </div>
   </section>
 
-  <section class="py-5 cta-section" id="hubungi">
+  <section class="py-5 section-reveal" id="faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">FAQ Singkat</h2>
+        <p class="section-subtitle">Beberapa pertanyaan yang paling sering ditanyakan calon mitra.</p>
+      </div>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+              Apakah VendingPrint bisa beroperasi tanpa operator?
+            </button>
+          </h2>
+          <div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Ya. Konsep utama VendingPrint adalah printer self-service yang dapat beroperasi 24 jam tanpa operator tetap.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+              Apakah harga print harus mengikuti harga website?
+            </button>
+          </h2>
+          <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Tidak harus. Harga Rp500 dan Rp1.000 di website adalah rekomendasi dari kami. Mitra dapat menyesuaikannya.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+              Siapa target bisnis utamanya?
+            </button>
+          </h2>
+          <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Fokus utama adalah B2B, yaitu penjualan unit kepada mitra. Namun penggunaan akhirnya tetap dapat langsung menyasar customer akhir.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 cta-section section-reveal" id="hubungi">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -434,8 +310,8 @@
             <p class="muted mb-4">
               Hubungi kami untuk informasi pembelian unit, kerja sama penempatan mesin, dan diskusi kebutuhan bisnis Anda.
             </p>
-            <div class="d-flex flex-wrap justify-content-center gap-3">
-              <a href="mailto:info@vendingprint.id" class="btn btn-primary btn-rounded">vendingprintid@gmail.com</a>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+              <a href="mailto:vendingprintid@gmail.com" class="btn btn-primary btn-rounded">vendingprintid@gmail.com</a>
               <a href="https://wa.me/6285175294729" class="btn btn-outline-primary btn-rounded" target="_blank">WhatsApp Kami</a>
             </div>
           </div>
@@ -446,17 +322,16 @@
 
   <footer class="py-4">
     <div class="container text-center">
-      <small>© <span id="year"></span> VendingPrint. Website resmi untuk informasi produk dan kemitraan bisnis.</small>
+      <small>
+        © <span id="year"></span> VendingPrint. Website resmi untuk informasi produk dan kemitraan bisnis.
+        <a href="terms.html" class="ms-2">Terms &amp; Conditions</a>
+      </small>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">↑</button>
 
-    function scrollToContact() {
-      document.getElementById('hubungi').scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
