@@ -42,28 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
   revealItems.forEach((item) => observer.observe(item));
 
   const statCards = document.querySelectorAll(".stats-row .hero-card .fs-4");
-  const finalValues = [8000000, 500, 1000];
+  const finalValues = [7500000, 500000, 500, 1000];
   let hasAnimated = false;
 
-  function formatRupiah(value, compact = false) {
-    if (compact && value >= 1000000) {
-      return "Rp" + (value / 1000000).toFixed(0) + ".000.000";
-    }
+  function formatRupiah(value) {
     return "Rp" + value.toLocaleString("id-ID");
   }
 
-  function animateValue(el, end, duration, compact = false) {
+  function animateValue(el, end, duration) {
     let start = 0;
     const startTime = performance.now();
 
     function update(now) {
       const progress = Math.min((now - startTime) / duration, 1);
       const current = Math.floor(progress * (end - start) + start);
-      el.textContent = formatRupiah(current, compact);
+      el.textContent = formatRupiah(current);
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
-        el.textContent = formatRupiah(end, compact);
+        el.textContent = formatRupiah(end);
       }
     }
 
@@ -76,9 +73,11 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasAnimated) {
           hasAnimated = true;
-          if (statCards[0]) animateValue(statCards[0], finalValues[0], 1200, true);
-          if (statCards[1]) animateValue(statCards[1], finalValues[1], 900, false);
-          if (statCards[2]) animateValue(statCards[2], finalValues[2], 900, false);
+          statCards.forEach((card, index) => {
+            if (finalValues[index]) {
+              animateValue(card, finalValues[index], index === 0 ? 1200 : 900);
+            }
+          });
         }
       });
     }, { threshold: 0.4 });

@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VendingPrint - Solusi Printer Otomatis untuk Bisnis</title>
-  <meta name="description" content="Website resmi VendingPrint, solusi vending machine printer untuk bisnis. Cocok untuk kemitraan B2B dengan harga unit mulai Rp8 jutaan." />
+  <meta name="description" content="Website resmi VendingPrint, solusi vending machine printer untuk bisnis. Cocok untuk kemitraan B2B dengan harga unit Rp7.500.000 atau skema sewa Rp500.000 per bulan." />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="apple-touch-icon" href="logo.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#home">VendingPrint</a>
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="#home">
+        <img src="logo.png" alt="Logo VendingPrint" class="brand-logo" />
+        <span>VendingPrint</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,11 +34,14 @@
   </nav>
 
   <section class="hero" id="home">
+    <div class="hero-banner fade-up">
+      <img src="hero.png" alt="Banner informasi VendingPrint" class="hero-banner-image" />
+    </div>
     <div class="container">
       <div class="row align-items-center g-5">
         <div class="col-lg-6 fade-up">
           <span class="hero-badge">Official Website VendingPrint</span>
-          <h1>Printer Self-Service 24 Jam untuk Bisnis Modern</h1>
+          <h1>VendingPrint: Printer Self-Service</h1>
           <p class="mt-3">
             VendingPrint adalah mesin printer self-service dalam box yang dirancang untuk kebutuhan bisnis dan kemitraan.
             Unit ini dapat beroperasi 24 jam tanpa operator, sehingga cocok ditempatkan di kampus, kantor, coworking space,
@@ -43,24 +51,34 @@
             Fokus utama kami adalah model <strong>B2B</strong>, yaitu membantu mitra memiliki dan menjalankan unit VendingPrint mereka sendiri.
             Namun, bisnis ini juga berpotensi <strong>B2C</strong> karena nantinya unit akan digunakan langsung oleh customer akhir.
           </p>
+          <p>
+            Untuk mitra yang ingin memulai tanpa membeli unit di awal, tersedia skema penyewaan unit sebesar
+            <strong>Rp500.000 per bulan</strong>.
+          </p>
           <div class="d-flex flex-wrap gap-3 mt-4">
             <a href="#katalog" class="btn btn-primary btn-rounded">Lihat Katalog Pembelian</a>
             <a href="#harga" class="btn btn-outline-primary btn-rounded">Lihat Harga</a>
           </div>
           <div class="row g-3 mt-4 stats-row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <div class="hero-card text-center hover-lift">
                 <div class="small-note">Harga Unit</div>
-                <div class="fw-bold fs-4">Rp8.000.000</div>
+                <div class="fw-bold fs-4">Rp7.500.000</div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
+              <div class="hero-card text-center hover-lift">
+                <div class="small-note">Sewa Unit</div>
+                <div class="fw-bold fs-4">Rp500.000</div>
+              </div>
+            </div>
+            <div class="col-sm-6">
               <div class="hero-card text-center hover-lift">
                 <div class="small-note">Rekomendasi B/W</div>
                 <div class="fw-bold fs-4">Rp500</div>
               </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <div class="hero-card text-center hover-lift">
                 <div class="small-note">Rekomendasi Warna</div>
                 <div class="fw-bold fs-4">Rp1.000</div>
@@ -152,7 +170,7 @@
             </ul>
             <!-- <div class="mt-4">
               <span class="small-note d-block">Estimasi Harga Unit</span>
-              <span class="price-highlight">Mulai Rp8.000.000</span>
+              <span class="price-highlight">Rp7.500.000</span>
               <p class="small-note mt-2 mb-0">
                 Harga dapat menyesuaikan spesifikasi, konfigurasi, dan kebutuhan bisnis.
               </p>
@@ -164,7 +182,7 @@
             <h5 class="fw-bold">Skema Bisnis</h5>
             <p class="muted">VendingPrint dirancang untuk alur bisnis berikut:</p>
             <ol class="simple-list ps-3 mb-0">
-              <li>Mitra membeli unit VendingPrint.</li>
+              <li>Mitra membeli unit VendingPrint atau menyewa dengan skema bulanan.</li>
               <li>Mitra menempatkan unit di lokasi strategis.</li>
               <li>Pelanggan akhir menggunakan layanan print.</li>
               <li>Mitra mengatur tarif dan operasional sesuai kebutuhan.</li>
@@ -181,20 +199,29 @@
       <div class="text-center mb-5">
         <h2 class="section-title">Informasi Harga</h2>
         <p class="section-subtitle">
-          Berikut harga acuan untuk unit dan layanan cetak pada VendingPrint.
+          Berikut harga acuan untuk pembelian unit, penyewaan, dan layanan cetak pada VendingPrint.
         </p>
       </div>
       <div class="row g-4">
-        <div class="col-lg-6">
+        <div class="col-lg-4">
           <div class="pricing-card hover-lift">
             <h4 class="fw-bold mb-3">Harga Unit Mesin</h4>
-            <div class="price-highlight mb-2">Mulai dari Rp8 Jutaan / Box</div>
+            <div class="price-highlight mb-2">Rp7.500.000 / Box</div>
             <p class="muted mb-0">
               Estimasi harga satu unit VendingPrint box untuk kebutuhan pengembangan bisnis dan kemitraan. Harga dapat menyesuaikan spesifikasi, konfigurasi, dan kebutuhan bisnis.
             </p>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-4">
+          <div class="pricing-card hover-lift">
+            <h4 class="fw-bold mb-3">Skema Penyewaan</h4>
+            <div class="price-highlight mb-2">Rp500.000 / Bulan</div>
+            <p class="muted mb-0">
+              Opsi sewa bulanan untuk mitra yang ingin menjalankan VendingPrint tanpa membeli unit di awal.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4">
           <div class="pricing-card hover-lift">
             <h4 class="fw-bold mb-3">Rekomendasi Tarif Cetak</h4>
             <div class="pricing-table">
@@ -243,7 +270,8 @@
                 <div class="p-4 rounded-4 border bg-light">
                   <img src="VendingPrint.png" alt="Mesin VendingPrint" class="img-fluid rounded-4 border mb-3" />
                   <div class="small-note">Harga Katalog</div>
-                  <div class="catalog-price mb-3">Rp8.000.000</div>
+                  <div class="catalog-price mb-2">Rp7.500.000</div>
+                  <div class="small-note mb-3">Sewa Rp500.000 / bulan</div>
                   <button class="btn btn-primary w-100 btn-rounded" onclick="scrollToContact()">Beli</button>
                 </div>
               </div>

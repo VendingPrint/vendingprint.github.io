@@ -27,9 +27,28 @@ body {
   letter-spacing: 0.4px;
 }
 
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
 .hero {
   background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-  padding: 90px 0 70px;
+  padding: 28px 0 70px;
+}
+
+.hero-banner {
+  width: min(1774px, calc(100% - 40px));
+  margin: 0 auto 42px;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.16);
 }
 
 .hero-badge {
@@ -72,6 +91,23 @@ body {
 .hover-lift:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+}
+
+.stats-row .hero-card {
+  display: flex;
+  min-height: 118px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+}
+
+.stats-row .hero-card .fs-4 {
+  max-width: 100%;
+  overflow-wrap: normal;
+  font-size: clamp(1.35rem, 2.1vw, 1.5rem) !important;
+  line-height: 1.15;
+  white-space: nowrap;
 }
 
 .machine-box {
@@ -234,7 +270,12 @@ footer {
 
 @media (max-width: 991px) {
   .hero {
-    padding: 72px 0 56px;
+    padding: 24px 0 56px;
+  }
+
+  .hero-banner {
+    width: calc(100% - 28px);
+    margin-bottom: 34px;
   }
 
   .hero h1 {
@@ -245,6 +286,28 @@ footer {
 @media (max-width: 576px) {
   .hero h1 {
     font-size: 1.9rem;
+  }
+
+  .hero {
+    padding-top: 16px;
+  }
+
+  .hero-banner {
+    width: calc(100% - 20px);
+    margin-bottom: 28px;
+  }
+
+  .hero-banner-image {
+    border-radius: 12px;
+  }
+
+  .stats-row .hero-card {
+    min-height: 104px;
+    padding: 18px 14px;
+  }
+
+  .stats-row .hero-card .fs-4 {
+    font-size: 1.35rem !important;
   }
 
   .machine-box {
