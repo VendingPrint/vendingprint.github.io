@@ -1,87 +1,82 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const year = document.getElementById("year");
-  const backToTop = document.getElementById("backToTop");
-  const revealItems = document.querySelectorAll(".section-reveal, .fade-up");
+"use strict";
 
-  if (year) {
-    year.textContent = new Date().getFullYear();
-  }
+// Native links and FAQ remain usable without JavaScript.
+document.documentElement.classList.add("js-ready");
 
-  function scrollToContact() {
-    const target = document.getElementById("hubungi");
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
-  }
+const menuButton = document.querySelector(".menu-toggle");
+const navigation = document.querySelector("#main-nav");
 
-  window.scrollToContact = scrollToContact;
+if (menuButton && navigation) {
+  const setMenuOpen = (open) => {
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.setAttribute(
+      "aria-label",
+      open ? "Tutup menu navigasi" : "Buka menu navigasi",
+    );
+    navigation.classList.toggle("is-open", open);
+  };
 
-  window.addEventListener("scroll", () => {
-    if (!backToTop) return;
-    if (window.scrollY > 300) {
-      backToTop.classList.add("show");
-    } else {
-      backToTop.classList.remove("show");
+  menuButton.addEventListener("click", () => {
+    setMenuOpen(menuButton.getAttribute("aria-expanded") !== "true");
+  });
+  navigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenuOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.key === "Escape" &&
+      menuButton.getAttribute("aria-expanded") === "true"
+    ) {
+      setMenuOpen(false);
+      menuButton.focus();
     }
   });
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav-shell")) setMenuOpen(false);
+  });
+  window
+    .matchMedia("(max-width: 850px)")
+    .addEventListener("change", () => setMenuOpen(false));
+}
 
-  if (backToTop) {
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  revealItems.forEach((item) => observer.observe(item));
-
-  const statCards = document.querySelectorAll(".stats-row .hero-card .fs-4");
-  const finalValues = [7500000, 500000, 500, 1000];
-  let hasAnimated = false;
-
-  function formatRupiah(value) {
-    return "Rp" + value.toLocaleString("id-ID");
-  }
-
-  function animateValue(el, end, duration) {
-    let start = 0;
-    const startTime = performance.now();
-
-    function update(now) {
-      const progress = Math.min((now - startTime) / duration, 1);
-      const current = Math.floor(progress * (end - start) + start);
-      el.textContent = formatRupiah(current);
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = formatRupiah(end);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  const statsSection = document.querySelector(".stats-row");
-  if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          hasAnimated = true;
-          statCards.forEach((card, index) => {
-            if (finalValues[index]) {
-              animateValue(card, finalValues[index], index === 0 ? 1200 : 900);
-            }
-          });
-        }
-      });
-    }, { threshold: 0.4 });
-
-    statsObserver.observe(statsSection);
-  }
+document.querySelectorAll("[data-year]").forEach((element) => {
+  element.textContent = String(new Date().getFullYear());
 });
+
+const calculator = document.querySelector("#print-calculator");
+if (calculator) {
+  const sheetsInput = calculator.querySelector("#sheet-count");
+  const totalOutput = calculator.querySelector("#print-total");
+  const errorMessage = calculator.querySelector("#quantity-error");
+  const currency = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    maximumFractionDigits: 0,
+  });
+
+  const updateEstimate = () => {
+    const sheets = sheetsInput.valueAsNumber;
+    const valid = sheetsInput.validity.valid && Number.isInteger(sheets);
+    sheetsInput.setAttribute("aria-invalid", String(!valid));
+    errorMessage.hidden = valid;
+    if (!valid) {
+      totalOutput.textContent = "—";
+      return;
+    }
+    const rate = Number(
+      calculator.querySelector('input[name="print-type"]:checked').value,
+    );
+    totalOutput.textContent = currency.format(sheets * rate).replace(/\s/g, "");
+  };
+
+  // Announce changes without moving keyboard focus away from the input.
+  totalOutput.setAttribute("aria-live", "polite");
+  totalOutput.setAttribute("aria-atomic", "true");
+  calculator.addEventListener("input", updateEstimate);
+  calculator.addEventListener("change", updateEstimate);
+  calculator.addEventListener("submit", (event) => {
+    event.preventDefault();
+    updateEstimate();
+  });
+  updateEstimate();
+}
